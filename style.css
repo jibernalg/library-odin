@@ -1,0 +1,124 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(230, 226, 226);  
+}
+
+.main{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: "titleB titleB"
+                        "inputB libraryB";
+    width: 100vw;
+    height: 100vh;
+}
+
+.upper-bar{
+    grid-area: titleB;
+    display: grid;
+    align-items: center;
+}
+.upper-bar .title{
+    margin: 2rem 0 0 2rem;
+    font-size: 1.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.formulario{
+    grid-area: inputB;
+    max-width: 250px;
+}
+.buttons{
+    padding: 0 0 0 2rem;
+    
+}
+button{
+    width: 3.5rem;
+    border-radius: 50px;
+    border-color:cornflowerblue;
+    cursor: pointer;
+}
+form {    
+    display: flex;
+    flex-flow:wrap;
+    gap: 1rem;
+    font-size: 1.2rem;
+    padding: 3rem 2vw 3rem 2rem;
+    font-weight: bolder;
+    
+    
+}
+label {
+    width: 12rem;
+    margin-bottom: 15px;
+}
+input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: .9rem;
+    margin-top: 3px;
+}
+#read{
+    position: relative;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px; 
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.library{
+    grid-area: libraryB;
+    background-image: url(./images/2tuju-19.jpg);
+    background-size:120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ficha{
+    background-color: rgb(255, 255, 255, 0.9);
+    border: 2px solid black;
+    width: 230px;
+    height: 250px;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    align-items: center;
+    font-size: 1rem;
+}
+.ficha h2{    
+    text-align: center;
+}
+.ficha p{    
+    text-align: center;
+    color: rgb(163, 64, 64);
+    font-weight: bold;
+
+}
+.ficha .read{    
+    text-align: center;
+    text-decoration: wavy;
+    color: grey;
+    font-weight:lighter;
+}
+
+.borrarFicha{
+    position: relative;
+    margin-left: 10rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 10px){
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
