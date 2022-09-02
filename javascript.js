@@ -9,13 +9,23 @@ clearBtn.addEventListener('click',function(){
     clearAll();
     
 })
-
+/*
 //Crear constructor
 function Book(titulo,autor,read){
     this.titulo=titulo;
     this.autor=autor;
     this.read=read;
-};
+};*/
+
+//Crear clase
+
+class Book{
+    constructor(titulo,autor,read){
+        this.titulo=titulo;
+        this.autor=autor;
+        this.read=read; 
+    }
+}
 
 //Array para almacenar en memoria
 let myLibrary=[];
